@@ -1,7 +1,7 @@
 package com.example.recycle
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recycle.databinding.ActivityMainBinding
 
@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         val codenames = listOf(
+            Header(),
             "cupcake",
             "donut",
             "eclair",
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             "marshmallow",
             "nougat",
             "oreo",
-            "pie"
+            "pie",
         )
         binding.recyclerView.adapter = CodeNameAdapter(codenames)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
